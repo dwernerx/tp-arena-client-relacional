@@ -22,7 +22,12 @@ class BuscadorAppModel {
 	}
 
 	def void buscar() {
-		listaDePois = getRepositorioPois().search(criterioBusqueda)
+		if(criterioBusqueda == null){
+			listaDePois = getRepositorioPois().allInstances
+		}
+		else{			
+			listaDePois = getRepositorioPois().search(criterioBusqueda)
+		}
 		if (listaDePois.isEmpty) throw new UserException("No se han hallado resultados.")
 	}
 
