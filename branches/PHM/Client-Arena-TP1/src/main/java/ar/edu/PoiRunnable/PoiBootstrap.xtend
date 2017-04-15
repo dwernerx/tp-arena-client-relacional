@@ -102,6 +102,7 @@ class PoiBootstrap extends CollectionBasedBootstrap {
 	Usuario lueta
 	Usuario martin
 	Usuario edu
+	Usuario pelado
 
 	Cgp sedeComuna1
 	Cgp sedeComuna2
@@ -244,6 +245,7 @@ class PoiBootstrap extends CollectionBasedBootstrap {
 		lueta = new Usuario("Lueta", "Rado", new Punto(-34.578510, -58.528880))
 		martin = new Usuario("Martin", "Gala", new Punto(-34.579100, -58.528108))
 		edu = new Usuario("Edu", "Cado", new Punto(-34.581767, -58.522186))
+		pelado = new Usuario("pelado", "pelado", new Punto(-34.581767, -58.522186))
 
 		crearUsuario(armando)
 		crearUsuario(guillermo)
@@ -255,6 +257,7 @@ class PoiBootstrap extends CollectionBasedBootstrap {
 		crearUsuario(lueta)
 		crearUsuario(martin)
 		crearUsuario(edu)
+		crearUsuario(pelado)
 	}
 			
 	def void crearColectivos() {
@@ -534,50 +537,35 @@ class PoiBootstrap extends CollectionBasedBootstrap {
 	def void agregarPoisFavoritosAUsuarios() {
 
 	agregarPoiFavorito(admin,bancoSantander)
+	agregarPoiFavorito(admin,colectivo78)
+	agregarPoiFavorito(admin,libreriaGarabombo)
+	agregarPoiFavorito(admin,sedeComuna4)
+	agregarPoiFavorito(admin,verduleriaManolo)
+	
 	agregarPoiFavorito(jaimito,colectivo78)
+	agregarPoiFavorito(jaimito,colectivo343)
 	agregarPoiFavorito(jaimito,bancoSantander)
-//		jaimito => [
-//			agregarPoiFavorito(colectivo78)
-//			agregarPoiFavorito(bancoSantander)
-//			agregarPoiFavorito(colectivo343)
-//			agregarPoiFavorito(bancoCiudad)
-//			agregarPoiFavorito(libreriaGarabombo)
-//		]
-//		bergoglio => [
-//			agregarPoiFavorito(bancoNacion)
-//			agregarPoiFavorito(verduleriaManolo)
-//			agregarPoiFavorito(viveroLotoAzul)
-//			agregarPoiFavorito(sedeComuna2)
-//			agregarPoiFavorito(sedeComuna5)
-//		]
-//		lueta => [
-//			agregarPoiFavorito(colectivo78)
-//			agregarPoiFavorito(sedeComuna2)
-//			agregarPoiFavorito(colectivo343)
-//			agregarPoiFavorito(bancoSantander)
-//			agregarPoiFavorito(sedeComuna2)
-//		]
-//		martin => [
-//			agregarPoiFavorito(bancoNacion)
-//			agregarPoiFavorito(bancoRioDelPlata)
-//			agregarPoiFavorito(sedeComuna2)
-//			agregarPoiFavorito(sedeComuna4)
-//			agregarPoiFavorito(colectivo343)
-//		]
-//		edu => [
-//			agregarPoiFavorito(bancoSantander)
-//			agregarPoiFavorito(colectivo78)
-//			agregarPoiFavorito(viveroLotoAzul)
-//			agregarPoiFavorito(colectivo343)
-//			agregarPoiFavorito(sedeComuna5)
-//		]
-//		admin => [
-//			agregarPoiFavorito(bancoSantander)
-//			//agregarPoiFavorito(colectivo78)
-//			//agregarPoiFavorito(colectivo57)
-//			//agregarPoiFavorito(sedeComuna3)
-//			//agregarPoiFavorito(sedeComuna1)
-//		]
+	agregarPoiFavorito(jaimito,bancoCiudad)
+	agregarPoiFavorito(jaimito,libreriaGarabombo)
+	
+	agregarPoiFavorito(bergoglio,bancoNacion)
+	agregarPoiFavorito(bergoglio,verduleriaManolo)
+	agregarPoiFavorito(bergoglio,viveroLotoAzul)
+	agregarPoiFavorito(bergoglio,sedeComuna2)
+	agregarPoiFavorito(jaimito,sedeComuna5)
+	
+	agregarPoiFavorito(lueta,colectivo78)
+	agregarPoiFavorito(lueta,sedeComuna2)
+	agregarPoiFavorito(lueta,colectivo343)
+	agregarPoiFavorito(lueta,bancoSantander)
+	agregarPoiFavorito(lueta,sedeComuna2)
+	
+	agregarPoiFavorito(martin,bancoNacion)
+	agregarPoiFavorito(martin,bancoRioDelPlata)
+	agregarPoiFavorito(martin,sedeComuna2)
+	agregarPoiFavorito(martin,sedeComuna4)
+	agregarPoiFavorito(martin,colectivo343)
+
 	}
 
 	def void crearReviews(){
@@ -673,20 +661,20 @@ class PoiBootstrap extends CollectionBasedBootstrap {
 			agregarReview(opinion20)
 		]
 
-	crearCalificacion(calificacion1)	
-	crearCalificacion(calificacion2)
-//	colectivo169.calificacion = calificacion2
-//		colectivo343.calificacion = calificacion3
-//		bancoSantander.calificacion = calificacion4
-//		bancoCiudad.calificacion = calificacion5
-//		bancoNacion.calificacion = calificacion6
-//		viveroLotoAzul.calificacion = calificacion7
-//		verduleriaManolo.calificacion = calificacion8
-//		libreriaGarabombo.calificacion = calificacion9
-//		sedeComuna2.calificacion = calificacion10
-//		sedeComuna4.calificacion = calificacion11
-//		sedeComuna5.calificacion = calificacion12
-	
+		crearCalificacion(calificacion1)
+		crearCalificacion(calificacion2)
+		crearCalificacion(calificacion1)
+		crearCalificacion(calificacion2)
+		crearCalificacion(calificacion3)
+		crearCalificacion(calificacion4)
+		crearCalificacion(calificacion5)
+		crearCalificacion(calificacion6)
+		crearCalificacion(calificacion7)
+		crearCalificacion(calificacion8)
+		crearCalificacion(calificacion9)
+		crearCalificacion(calificacion10)
+		crearCalificacion(calificacion11)
+		crearCalificacion(calificacion12)
 	}
 
 }
