@@ -28,8 +28,8 @@ class BuscadorPoiWindow extends SimpleWindow<BuscadorAppModel> {
 		title = "Busqueda de Puntos de Interes"
 		iconImage = "src/main/java/mapsicon.png"
 		modelObject.buscar
-		modelObject.actualizarUbicacion
-		modelObject.chequearFavorito
+		//modelObject.actualizarUbicacion // Estan al pedo los puedo hacer previamente desde le controller
+		//modelObject.chequearFavorito // Estan al pedo los puedo hacer previamente desde le controller
 	}
 
 	override def createMainTemplate(Panel mainPanel) {
@@ -67,6 +67,15 @@ class BuscadorPoiWindow extends SimpleWindow<BuscadorAppModel> {
 			width = 100
 			setAsDefault
 			background = Color.orange
+			]	
+			
+			new Label(it).text = "         "
+
+			new Button(it) => [
+			caption = "Todos"
+			onClick[|this.modelObject.allPois]
+			width = 100
+			background = Color.blue
 			]	
 		]
 		
@@ -134,8 +143,8 @@ class BuscadorPoiWindow extends SimpleWindow<BuscadorAppModel> {
 	
 	def executePoiWindow(Poi poi){
 		openPoiWindow(poi)
-		modelObject.actualizarUbicacion
-		modelObject.chequearFavorito
+		//modelObject.actualizarUbicacion// Estan al pedo los puedo hacer previamente desde le controller
+		//modelObject.chequearFavorito// Estan al pedo los puedo hacer previamente desde le controller
 	}
 
 	def dispatch openPoiWindow(Banco banco) {
