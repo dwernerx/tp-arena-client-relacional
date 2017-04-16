@@ -23,7 +23,7 @@ class PoiAppModel<T extends Poi> {
 		usuarioLogueado = _usuarioLogueado
 		poi = _poiSeleccionado
 		buildLista()
-		esFavorito = usuarioLogueado.getPoiEstaEnFavoritos(poi)
+		esFavorito = usuarioLogueado.poiEstaEnFavoritos(poi)
 	}
 
 	def generarReview() {
@@ -47,8 +47,8 @@ class PoiAppModel<T extends Poi> {
 	}
 
 	def getEsFavorito() {
-		if (esFavorito != usuarioLogueado.getPoiEstaEnFavoritos(poi)) {
-			if (usuarioLogueado.getPoiEstaEnFavoritos(poi)) {
+		if (esFavorito != usuarioLogueado.poiEstaEnFavoritos(poi)) {
+			if (usuarioLogueado.poiEstaEnFavoritos(poi)) {
 				usuarioLogueado.eliminarPoiFavorito(poi)
 			} else {
 				usuarioLogueado.agregarPoiFavorito(poi)
