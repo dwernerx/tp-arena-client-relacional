@@ -141,6 +141,7 @@ class BuscadorPoiWindow extends SimpleWindow<BuscadorAppModel> {
 	
 	def executePoiWindow(Poi poi){
 		openPoiWindow(poi)
+		modelObject.allPois()//actualizar pois
 	}
 
 	def dispatch openPoiWindow(Banco banco) {
