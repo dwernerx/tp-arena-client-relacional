@@ -19,7 +19,6 @@ class LoginAppModel {
 	
 	def iniciarSesion() {
 		usuarioLogueado = repositorioUsuarios.iniciarSesion(new Usuario(cuenta,password))
-//		usuarioLogueado = repositorioUsuarios.iniciarSesion(cuenta,password)
 		/** en el repo toma la cuenta y el password del usuario, no estaria mejor si se 
 		 * pasan estos dos atributos directamente??*/
 	}
