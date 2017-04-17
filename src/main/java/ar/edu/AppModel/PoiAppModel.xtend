@@ -43,6 +43,7 @@ class PoiAppModel<T extends Poi> {
 		repositorioPois.createOrUpdate(poi)
 		buildLista()
 	}
+	
 
 	@Dependencies("listReviews")
 	def getCalificacion() {
