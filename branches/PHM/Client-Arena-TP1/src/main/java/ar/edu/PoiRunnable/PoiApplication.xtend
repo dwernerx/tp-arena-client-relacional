@@ -12,7 +12,6 @@ class PoiApplication extends Application{
 	}
 	
 	static def void main(String[] args) { 
-//		new PoiApplication(new PoisBootstrap).start()
 		new PoiApplication(PoiBootstrap.instance).start()
 	}
 

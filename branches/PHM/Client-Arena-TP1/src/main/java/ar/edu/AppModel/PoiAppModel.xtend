@@ -23,10 +23,10 @@ class PoiAppModel<T extends Poi> {
 	Boolean esFavorito
 
 	new(Usuario _usuarioLogueado, T _poiSeleccionado) {
-		usuarioLogueado = _usuarioLogueado// recibo el usuario
-		poi = repositorioPois.searchById(_poiSeleccionado.id) as T//recibo el poi cosa que ahora voy a mandar a buscar bien rico.
+		usuarioLogueado = _usuarioLogueado
+		poi = repositorioPois.searchById(_poiSeleccionado.id) as T
 		buildLista()//relleno la listaDeReviews
-		esFavorito = usuarioLogueado.poiEstaEnFavoritos(poi)//El checkbox papá
+		esFavorito = usuarioLogueado.poiEstaEnFavoritos(poi)
 	}
 	
 	def RepositorioPoi repositorioPois() {
@@ -56,7 +56,7 @@ class PoiAppModel<T extends Poi> {
 	}
 
 	def getDistancia() {
-		poi.getDistancia(usuarioLogueado.ubicacion)//(usuarioLogueado.getPosicionActual)
+		poi.getDistancia(usuarioLogueado.ubicacion)
 	}
 
 	def getEsFavorito() {
