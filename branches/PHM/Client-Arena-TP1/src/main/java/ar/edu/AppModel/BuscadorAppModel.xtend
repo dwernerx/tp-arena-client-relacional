@@ -8,6 +8,7 @@ import org.eclipse.xtend.lib.annotations.Accessors
 import org.uqbar.commons.model.UserException
 import org.uqbar.commons.utils.ApplicationContext
 import org.uqbar.commons.utils.Observable
+import ar.edu.Repositorios.RepositorioUsuario
 
 @Accessors
 @Observable
@@ -18,7 +19,11 @@ class BuscadorAppModel {
 	Usuario usuarioLogueado // usuario que viene de la pantalla de login.
 
 	new(Usuario usuario) {
-		usuarioLogueado = usuario
+		usuarioLogueado = repositorioUsuario.searchById(usuario.id)
+	}
+	
+	def RepositorioUsuario repositorioUsuario() {
+		ApplicationContext.instance.getSingleton(typeof(Usuario)) // instancio un RepositorioPoi
 	}
 	
 	def void allPois() {
