@@ -14,7 +14,7 @@
 		<dependency>
 			<groupId>AlgoritmosG3</groupId>
 			<artifactId>PuntosDeInteres</artifactId>
-			<version>0.0.10-SNAPSHOT</version>
+			<version>0.0.7-SNAPSHOT</version>
 			<!--<name>POIS</name> -->
 		</dependency>
 		
